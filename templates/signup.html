@@ -1,0 +1,133 @@
+<html>
+
+<head>
+   <title>Login</title>
+</head>
+
+<style type="text/css">
+
+     .user_details {
+     	font-family: Arial;
+     	font-size: 22px;
+     }
+
+     .login {
+     	font-family: Arial;
+     	font-size: 15px;
+     	position: absolute;
+     	color: blue;
+     	top:10;
+     	right: 60;
+
+     }
+
+     .error {
+     	color: red;
+     }
+
+     .instructions{
+     	font-size: 20px;
+     	font-family: Arial;
+     	font-weight: bold;
+          padding-top: 10px;
+     	padding-bottom: 50px;
+     	color: green;
+
+     }
+
+     .footer{
+          text-align: center;
+          padding-top: 5px;
+     }
+
+     .image {
+          text-align: center;
+          padding-bottom: 10px;
+     }
+
+     h1 {
+
+     	padding-top: 10px;
+     	padding-bottom: 10px;
+     	color: blue;
+     	text-align: center;
+
+     }
+
+     body {
+
+     	width: 650;
+     	margin: 0 auto;
+
+     }
+
+     input[type="submit"] {
+          font-size: 19px;
+     }
+
+     input[type="password"] {
+          font-size: 19px;
+          width: 300px;
+     }
+
+      input[type="text"] {
+          font-size: 19px;
+          width: 300px;
+     }
+
+</style>
+
+
+<body>
+
+	<h1>User SignUp page </h1>
+
+	<a class="login" href="/login">Login</a>
+
+	<div class="instructions">Register to enjoy the full benefits of the blog</div>
+
+	
+	<form method="post">
+		<table>
+
+			<tr>
+				<td class="user_details">Username </td>
+				<td> <input type="text" name="username" value="{{username}}"></td>
+				<td class="error">{{name_error}}</td>
+			</tr>
+
+			<tr>
+				<td class="user_details">Password </td>
+				<td> <input type="password" name="password" value="" ></td>
+				<td class="error">{{invalid_password}}</td>
+			</tr>
+
+			<tr>
+				<td class="user_details">Verify password </td>
+				<td> <input type="password" name="verify" value=""></td>
+				<td class="error">{{verify_password}}</td>
+			</tr>
+
+			<tr>
+				<td class="user_details">Email (optional) </td>
+				<td> <input type="text" name="email" value="{{email}}"></td>
+				<td class="error">{{invalid_email}}</td>
+			</tr>
+						
+
+		</table>
+		<br>
+
+		<input type="submit" value="Register">
+	</form>
+     <br>
+     <br>
+     <div class="image">
+          <img src="http://www.moneymagpie.com/wp-content/uploads/2011/03/Blogger-Logo.jpg" height="120" alt="blog image">
+     </div>
+    
+     <footer class="footer">All the latest blogs stories @ 2015</footer>
+</body>
+
+
+</html>

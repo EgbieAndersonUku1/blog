@@ -1,0 +1,124 @@
+<html>
+
+     <head>
+        <title>New post</title>
+     </head>
+
+     <style type="text/css">
+
+          .user_details {
+          	font-family: Arial;
+          	font-size: 20px;
+          }
+
+          .signup {
+          	font-family: Arial;
+          	font-size: 13px;
+          	position: absolute;
+          	color: blue;
+          	top:10;
+          	right: 60;
+
+          }
+
+          .error {
+          	color: red;
+          }     
+
+          a:link {
+               text-decoration: none;
+          }
+
+          a:hover {
+              color: red;
+          }
+
+          .login-area{
+               font-size: 14px;
+               position: absolute;
+               top: 10px;
+               right: 30px;
+
+          }
+
+
+          h1 {
+
+          	padding-top: 1px;
+          	color: blue;
+               text-align: center;
+
+          }
+
+          body {
+
+          	width: 750;
+          	margin: 0 auto;
+               font-size: 20px;
+               font-family: Arial;
+          	
+          }
+
+
+          input[type="submit"] {
+               font-size: 19px;
+          }
+
+        
+          input[type="text"] {
+               font-size: 19px;
+               width: 750px;
+               height: 32px;
+          }
+
+          textarea {
+               width: 750px;
+               height: 500px;
+               font-size: 20px;
+               font-family: Arial;
+                
+          }
+
+          label{
+               padding-bottom: 5px;
+               text-align: bold;
+          }
+
+     </style>
+
+
+     <body>
+
+     	<h1>Blog</h1>
+
+          <p class="login-area">
+               {% if user %}
+                    You are logged in as {{user.user_name}} (<a href="/logout">logout</a>)
+                    | (<a href="/blog">posts</a>)
+               {% else %}
+                   (<a href="/login">Login</a> | <a href="/signup">Signup</a> | <a href="/blog">Posts</a>)
+               {% endif %}
+          </p>
+
+          <b> New Post </b>
+          <br>
+     	<form method="post">
+               <label> Subject </label>
+                  <br>
+     		   <input type="text" name="subject" value="{{subject}}">
+                  <span class="error">{{title_err}}</span>
+
+               <br>
+               <label> Body </label>
+               <br>
+               <textarea type="text" name="blog" placeholder="Enter the blog body">{{blog}}</textarea>
+               <span class="error">{{body_err}}</span>
+
+               <br>
+     		<input type="submit" value="Post">
+              
+     	</form>
+     </body>
+
+
+</html>

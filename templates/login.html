@@ -1,0 +1,112 @@
+
+<html>
+
+<head>
+   <title>Login</title>
+</head>
+
+<style type="text/css">
+     .user_details {
+     	font-family: Arial;
+     	font-size: 20px;
+     }
+
+     .signup {
+     	font-family: Arial;
+     	font-size: 20px;
+     	color: blue
+
+     }
+
+     .message {
+          font-family: Arial;
+          font-size: 20px;
+          padding-top: 10px;
+          
+     }
+
+     .error {
+     	color: red;
+          font-weight: bold;
+          font-size: 17px;
+     }
+
+     a:link {
+          text-decoration: none;
+     }
+
+     a:hover {
+         color: red;
+     }
+
+     h1 {
+
+     	padding-top: 30px;
+     	padding-bottom: 3px;
+     	color: blue;
+          text-align: center;
+
+     }
+
+     body {
+
+     	width: 650;
+     	margin: 0 auto;
+     	
+     }
+
+
+     input[type="submit"] {
+          font-size: 19px;
+     }
+
+     input[type="password"] {
+          font-size: 19px;
+          width: 400px;
+     }
+
+      input[type="text"] {
+          font-size: 19px;
+          width: 400px;
+     }
+
+</style>
+
+
+<body>
+
+	<h1>User Login page </h1>
+
+
+	
+	<form method="post">
+		<table>
+
+			<tr>
+				<td class="user_details">Username </td>
+				<td> <input type="text" name="username" value="{{username}}"></td>
+			</tr>
+
+			<tr>
+				<td class="user_details">Password </td>
+				<td> <input type="password" name="password" value="{{password}}"></td>
+			</tr>
+
+			<p class="error">{{invalid_login}}</p>		
+
+		</table>
+          <br>
+		<input type="submit" value="Login">
+	</form>
+
+     <img src="http://4.bp.blogspot.com/-xvAkQlrL0Qk/U2H6NB9k0UI/AAAAAAAABH4/1Vb4sRdROqQ/s1600/full-time-blogging.png" height="300" alt="blog image">
+     <br>
+     <br>
+     <div class="message">Do not have a blog account?
+         <a class="signup" href="/signup"> Sign up now</a>
+     </div>
+
+</body>
+
+
+</html>

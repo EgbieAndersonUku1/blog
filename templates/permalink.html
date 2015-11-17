@@ -1,0 +1,105 @@
+<html>
+
+     <head>
+        <title>Login</title>
+     </head>
+
+     <style type="text/css">
+          .user_details {
+          	font-family: Arial;
+          	font-size: 20px;
+          }
+
+          .signup {
+          	font-family: Arial;
+          	font-size: 13px;
+          	position: absolute;
+          	color: blue;
+          	top:10;
+          	right: 60;
+
+          }
+
+          .error {
+          	color: red;
+          }     
+
+          a:link {
+               text-decoration: none;
+          }
+
+          a:hover {
+              color: red;
+          }
+
+          .login-area{
+               font-size: 14px;
+               position: absolute;
+               top: 12px;
+               right: 20px;
+          }
+
+          .time {
+
+               position: absolute;
+               top: 69px;
+               right: 270px;
+               font-family: Arial;
+               font-size: 16px;
+               color: #999;
+
+          }
+
+
+          .heading {
+               font-family: Arial;
+               font-weight: bolder;
+               font-size: 21px;
+          }
+
+
+          h1 {
+
+          	padding-top: 1px;
+          	color: blue;
+               text-align: center;
+
+          }
+
+          body {
+
+          	width: 790;
+          	margin: 0 auto;
+               font-size: 17px;
+               font-family: Arial;
+          	
+          }
+
+     </style>
+
+     <body>
+
+     	<h1>Blog</h1>
+
+          <p class="login-area">
+               {% if user %}
+                    You are logged in as {{user.user_name}} (<a href="/logout">logout</a>) | 
+                    <a href="/blog">posts</a> | <a href="/blog/newpost">new post</a>
+               {% else %}
+                   (<a href="/login">Login</a> | <a href="/signup">Signup</a> | <a href="/blog">Posts</a>)
+               {% endif %}
+          </p>
+
+          <div class="heading">
+               {{post.subject}}
+               <span class="time">
+                    {{post.created.strftime("%b %d, %Y")}}
+               </span>
+               <hr>
+          </div>
+         
+          {{post.content | safe}}
+            
+     </body>
+
+</html>
