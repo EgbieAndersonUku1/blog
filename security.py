@@ -7,9 +7,6 @@ import hashlib
 import re
 import os
 
-
-
-
 SECRET = load_secret_key()
 
 class Secure(object):
